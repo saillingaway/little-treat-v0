@@ -70,15 +70,12 @@
   </div>
 </div>
 
-  <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build</pre>
-  </div>
+  <!-- Little Treats Archive -->
+  <h2>Your Archive of Little Treats</h2>
+  <p>When will your next little treat be?</p>
+  <app-treat-archive
+    [treats]="treats">
+  </app-treat-archive>
 
   <!-- Links -->
   <div class="card-container">

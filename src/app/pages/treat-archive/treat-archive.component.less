@@ -1,0 +1,87 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+  
+  .content {
+    display: flex;
+    margin: 12px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start;
+  }
+
+  .card-container .treat-card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .treat-card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .treat-card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .treat-card {
+    width: 275px;
+    max-height: 175px;
+    margin: 10px;
+
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  // .svg-container {
+  //   margin-left: auto;
+  // }
+
+  .svg-icon {
+    float: right;
+  }
+
+  .card-footer {
+    // display: flex;
+    // justify-content: flex-end;
+    text-align: right;
+  }
+
+
+  
