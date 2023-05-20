@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TreatService } from './services/treat.service';
 import { Treat } from './pages/new-treat/new-treat.component';
 
 @Component({
@@ -10,12 +11,15 @@ export class AppComponent {
   title = 'little-treat-v0';
   showAddTreatForm = false;
   totalTreats = 147;
+  treats: Treat[] = [];
   loading = false;
 
-  constructor() {
+  constructor(private treatService: TreatService) {
+    console.log(this.treats);
   }
 
   ngOnInit(){
+    this.getTreats();
   }
 
   addTreat(){
@@ -26,5 +30,11 @@ export class AppComponent {
   hideForm(){
     this.showAddTreatForm = false;
     console.log('cancel pressed: ', this.showAddTreatForm);
+  }
+
+  getTreats(): void {
+    this.treatService.getTreats().subscribe((treats) => {
+      this.treats = treats;
+    });
   }
 }
